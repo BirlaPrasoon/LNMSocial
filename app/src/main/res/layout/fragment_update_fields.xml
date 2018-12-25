@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/departmentsCard"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:cardCornerRadius="5dp"-->
+            <!--android:onClick="departmentClicked">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:elevation="3dp"-->
+                <!--android:onClick="departmentClicked">-->
+
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:text="Department"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:tag="department"-->
+                    <!--android:onClick="departmentClicked"/>-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/departMentArrow"-->
+                    <!--android:layout_marginVertical="10dp"-->
+                    <!--android:layout_marginRight="16dp"-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:src="@drawable/arrow_down"-->
+                    <!--android:onClick="departmentClicked"/>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/subdepartmentsCard"-->
+            <!--android:layout_below="@id/departmentsCard"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:cardCornerRadius="5dp">-->
+
+            <!--<com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:id="@+id/departmentExpandableLayout"-->
+                <!--android:background="#fff">-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/dept_CSE"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="CSE"-->
+                    <!--android:layout_marginStart="16sp"/>-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/dept_CCE"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="CCE"-->
+                    <!--android:layout_marginLeft="16sp"-->
+                    <!--android:layout_marginStart="16sp"-->
+                    <!--android:layout_below="@id/dept_CSE"/>-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/dept_MTE"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="MTE"-->
+                    <!--android:layout_marginLeft="16sp"-->
+                    <!--android:layout_marginStart="16sp"-->
+                    <!--android:layout_below="@id/dept_CCE"/>-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/dept_EC"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="EC"-->
+                    <!--android:layout_marginLeft="16sp"-->
+                    <!--android:layout_marginStart="16sp"-->
+                    <!--android:layout_below="@id/dept_MTE"/>-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/dept_ME"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="ME"-->
+                    <!--android:layout_marginLeft="16sp"-->
+                    <!--android:layout_marginStart="16sp"-->
+                    <!--android:layout_below="@id/dept_EC"/>-->
+
+
+            <!--</com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/clubsCard"
+            android:layout_below="@id/subdepartmentsCard"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:onClick="clubsClicked">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="clubsClicked">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Clubs"
+                    android:textSize="20sp"
+                    android:paddingTop="10dp"
+                    android:tag="department"
+                    android:onClick="clubsClicked"/>
+
+                <ImageView
+                    android:id="@+id/clubsArrow"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/arrow_down"
+                    android:onClick="clubsClicked"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/subclubsCard"
+            android:layout_below="@id/clubsCard"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:onClick="clicked">
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/clubsExpandableLayout"
+                android:background="#fff">
+
+                <CheckBox
+                    android:id="@+id/club_cybros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cybros"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"/>
+
+                <CheckBox
+                    android:id="@+id/club_csi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CSI"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/club_cybros"/>
+
+                <CheckBox
+                    android:id="@+id/club_insignia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Insignia"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/club_csi"/>
+
+                <CheckBox
+                    android:id="@+id/club_ecell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ECell"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/club_insignia"/>
+
+                <CheckBox
+                    android:id="@+id/club_ccell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CCell"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@+id/club_ecell"/>
+
+                <CheckBox
+                    android:id="@+id/club_arts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arts"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/club_ccell"/>
+
+                <CheckBox
+                    android:id="@+id/club_rendition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rendition"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@+id/club_arts"/>
+                <CheckBox
+                    android:id="@+id/club_quizzinga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quizzinga"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@+id/club_rendition"/>
+                <CheckBox
+                    android:id="@+id/club_literary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Literary"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@+id/club_quizzinga"/>
+
+                <CheckBox
+                    android:id="@+id/club_chess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chess"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@+id/club_literary"/>
+
+                <CheckBox
+                    android:id="@+id/club_fashion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fashion"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/club_chess"/>
+
+                <CheckBox
+                    android:id="@+id/club_innovation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Innnovation"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/club_fashion"/>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/sportsCard"
+            android:layout_below="@id/subclubsCard"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:onClick="sportsClicked">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="sportsClicked">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sports"
+                    android:textSize="20sp"
+                    android:paddingTop="10dp"
+                    android:tag="department"
+                    android:onClick="sportsClicked"/>
+
+                <ImageView
+                    android:id="@+id/sportsArrow"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/arrow_down"
+                    android:onClick="sportsClicked"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/subSportsCard"
+            android:layout_below="@id/sportsCard"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp">
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/sportsExpandableLayout"
+                android:background="#fff"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+
+                <CheckBox
+                    android:id="@+id/sport_badminton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Badminton"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"/>
+
+                <CheckBox
+                    android:id="@+id/sport_ttennis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TableTennis"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/sport_badminton"/>
+
+                <CheckBox
+                    android:id="@+id/sport_cricket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cricket"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/sport_ttennis"/>
+
+                <CheckBox
+                    android:id="@+id/sport_football"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Football"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/sport_cricket"/>
+
+                <CheckBox
+                    android:id="@+id/sport_volleyball"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Volleyball"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/sport_football"/>
+
+                <CheckBox
+                    android:id="@+id/sport_basketball"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Basketball"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/sport_volleyball"/>
+
+                <CheckBox
+                    android:id="@+id/sport_lawn_tennis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lawn Tennis"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/sport_basketball"/>
+
+
+                <CheckBox
+                    android:id="@+id/sport_kabaddi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kabaddi"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/sport_lawn_tennis"/>
+
+                <CheckBox
+                    android:id="@+id/sport_squash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Squash"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/sport_kabaddi"/>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/interestsCard"
+            android:layout_below="@id/subSportsCard"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:onClick="interestsClicked">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="interestsClicked">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Interests"
+                    android:paddingStart="16dp"
+                    android:textSize="20sp"
+                    android:paddingTop="10dp"
+                    android:tag="department"
+                    android:onClick="interestsClicked"/>
+
+                <ImageView
+                    android:id="@+id/interestsArrow"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/arrow_down"
+                    android:onClick="interestsClicked"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/subInterestsCard"
+            android:layout_below="@id/interestsCard"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp">
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:tag="Interests"
+                android:background="#fff"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/interestsExpandableLayout">
+
+                <CheckBox
+                    android:id="@+id/int_cp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CP"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"/>
+
+                <CheckBox
+                    android:id="@+id/int_ai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AI"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@+id/int_cp"/>
+
+                <CheckBox
+                    android:id="@+id/int_ds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DS"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@+id/int_ai"/>
+
+                <CheckBox
+                    android:id="@+id/int_ml"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ML"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@+id/int_ds"/>
+
+                <CheckBox
+                    android:id="@+id/int_web_dev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Web Developement"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/int_ml"/>
+
+                <CheckBox
+                    android:id="@+id/int_mobile_web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Web Developement"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/int_web_dev"/>
+
+                <CheckBox
+                    android:id="@+id/int_android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/int_mobile_web"/>
+
+                <CheckBox
+                    android:id="@+id/int_literature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Literature"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/int_android"/>
+
+                <CheckBox
+                    android:id="@+id/int_blockchain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blockchain"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/int_literature"/>
+
+
+                <CheckBox
+                    android:id="@+id/int_content_writing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Content Writing"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/int_blockchain"/>
+
+
+                <CheckBox
+                    android:id="@+id/int_uiux"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="UI/UX Design"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/int_content_writing"/>
+                <CheckBox
+                    android:id="@+id/int_ios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IOS"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_below="@id/int_uiux"/>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/submitFieldsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:onClick="submit"
+            android:layout_below="@id/subInterestsCard"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/buttons_background"
+            android:textColor="#fff"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

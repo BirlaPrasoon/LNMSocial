@@ -1,20 +1,21 @@
-package com.example.prasoon.lnmsocial;
+package com.example.prasoon.lnmsocial.viewPagers;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
+
+import com.example.prasoon.lnmsocial.SearchResultActivity;
+import com.example.prasoon.lnmsocial.activities.ProfileActivity;
+import com.example.prasoon.lnmsocial.activities.SearchActivity;
 
 public class VerticalViewPager extends ViewPager {
 
     private float x1,x2;
-    static final int MIN_DISTANCE = 150;
-    GestureDetector gestureDetector;
+    static final int MIN_DISTANCE = 350;
 
     public VerticalViewPager(Context context) {
         super(context);
@@ -77,7 +78,8 @@ public class VerticalViewPager extends ViewPager {
                 }
                 else if( deltaX < -MIN_DISTANCE)
                 {
-                    Intent intent = new Intent(getContext(), ProfileActivity.class);
+//                    Intent intent = new Intent(getContext(), ProfileActivity.class);
+                    Intent intent = new Intent(getContext(), SearchResultActivity.class);
                     getContext().startActivity(intent);
                     // consider as something else - a screen tap for example
                 }
@@ -87,7 +89,7 @@ public class VerticalViewPager extends ViewPager {
     }
 
     private class VerticalPageTransformerAnimate implements ViewPager.PageTransformer {
-        private static final float MIN_SCALE = 0.75f;
+        private static final float MIN_SCALE = 0.5f;
 
         @Override
         public void transformPage(@NonNull View view, float position) {

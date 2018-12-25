@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "660543891188",
+    "firebase_url": "https://lnm-social-app.firebaseio.com",
+    "project_id": "lnm-social-app",
+    "storage_bucket": "lnm-social-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660543891188:android:66afe7f2f1312f4c",
+        "android_client_info": {
+          "package_name": "com.example.prasoon.lnmsocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660543891188-eko417s66pfldf26n7g7i04fbhf0kgat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.prasoon.lnmsocial",
+            "certificate_hash": "fe00924f5f790251fe219802fbc05f2ca124cc72"
+          }
+        },
+        {
+          "client_id": "660543891188-vri8oukggli2fvq3bt85gcads244i6im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKVTTi2JqOGcsv0AkxOMswq_F5L2sLmfQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660543891188-vri8oukggli2fvq3bt85gcads244i6im.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

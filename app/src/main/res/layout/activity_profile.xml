@@ -1,7 +1,979 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootViewProfileActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity" />
+    tools:context=".activities.ProfileActivity"
+    android:background="@drawable/backgroundwall">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/colorPrimary"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="52dp"
+            android:elevation="8dp"
+            android:src="@drawable/user1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="1dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:text="Tom Riddle"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/user_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_name"
+                    android:text="I can make bad things to people who annoy me. I can make them hurt if I want to."
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/hometown"
+                    android:layout_below="@id/user_about"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="hometown"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_below="@id/hometown"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="state"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/user_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/state"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="8dp"
+                    android:elevation="2dp"
+                    android:text="CSE"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/user_current_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/state"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="2dp"
+                    android:text="3rd Year"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/userPhoneNumber"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_current_year"
+                    android:text="PhoneNumber"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="@color/blue" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userPhoneNumber"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:elevation="8dp"
+                        android:src="@drawable/facebook"
+                        android:id="@+id/facebookIcon"
+                        android:onClick="iconClicked"
+                        android:tag="facebook"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:elevation="8dp"
+                        android:src="@drawable/linkedin"
+                        android:id="@+id/linkedInIcon"
+                        android:onClick="iconClicked"
+                        android:tag="linkedin"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:elevation="8dp"
+                        android:src="@drawable/githubb"
+                        android:id="@+id/githubIcon"
+                        android:onClick="iconClicked"
+                        android:tag="github"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:elevation="8dp"
+                        android:src="@drawable/twitter"
+                        android:id="@+id/twitterIcon"
+                        android:onClick="iconClicked"
+                        android:tag="twitter"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/CSI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Clubs CSI"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CSI"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Cybros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Clubs Cybros"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cybros"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Insignia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Clubs Insignia"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Insignia"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/ECell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Clubs ECell"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ECell"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/CCell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Clubs CCell"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CCell"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Arts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arts"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Rendition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rendition"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Quizzinga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quizzinga"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Literary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Literary"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Chess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chess"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Fashion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:visibility="gone"
+                >
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fashion"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/Innovation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Innovation"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:id="@+id/Badminton"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Badminton"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/TableTennis"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TableTennis"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/Basketball"
+                android:visibility="gone"
+                >
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Basketball"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/VolleyBall"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VolleyBall"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                   />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/Football"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Football"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/Cricket"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cricket"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/LawnTennis"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LawnTennis"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/Kabbadi"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kabbadi"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:id="@+id/Squash"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Squash"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/AI"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AI"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/CP"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CP"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/DS"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DS"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:id="@+id/ML"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ML"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:id="@+id/WebDev"
+                android:tag="Interests WebDev"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WebDev"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/MobileWeb"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MobileWeb"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/Android"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/Literature"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Literature"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/Blockchain"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blockchain"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/ContentWriting"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ContentWriting"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#7C6565"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/IOS"
+                android:visibility="gone">
+
+            <TextView
+
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IOS"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:textColor="#7C6565"/>
+
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:elevation="3dp"
+                android:tag="Interests WebDev"
+                android:id="@+id/UIUX"
+                android:visibility="gone">
+
+            <TextView
+
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UIUX"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:textColor="#7C6565"
+                />
+        </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
